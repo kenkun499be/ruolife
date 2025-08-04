@@ -57,7 +57,7 @@ body, html {
 /* ゲーム画面 */
 #game-screen .character {
     z-index: 1; /* キャラクターのレイヤーをボタンの下に変更 */
-    width: 1000px; /* キャラクターの幅を大きくする */
+    width: 500px; /* キャラクターの幅を大きくする */
     top:70px;
     position: relative;
 }
