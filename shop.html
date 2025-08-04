@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>りすさん育成ゲーム</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- ホームボタン -->
+    <a href="index.html" id="home-button" class="home-button">ホーム</a>
+
+    <!-- 所持金表示 -->
+    <div id="money-display" class="money-display">
+        <div class="money-box">
+            <img src="textures/coin.png" alt="所持金アイコン" class="money-icon" />
+            <span id="money-amount">0</span>
+        </div>
+    </div>
+
+    <!-- おやつリスト（ここを追加） -->
+    <div id="snack-list"></div> <!-- snack-list 要素を追加 -->
+
+    <!-- ショップ画面 -->
+    <div id="shop-screen">
+        <div class="shop-background">
+            <div class="shop-items">
+                <div class="shop-item" data-name="いちご" data-price="100">
+                    <img src="textures/items/strawberry.png" alt="いちご">
+                    <p>いちご</p>
+                    <div class="coin-display">
+                        <img src="textures/coin.png" alt="所持金アイコン" />
+                        <span>100</span>
+                    </div>
+                </div>
+                <div class="shop-item" data-name="マカロン" data-price="100">
+                    <img src="textures/items/macaron.png" alt="マカロン">
+                    <p>マカロン</p>
+                    <div class="coin-display">
+                        <img src="textures/coin.png" alt="所持金アイコン" />
+                        <span>100</span>
+                    </div>
+                </div>
+                <div class="shop-item" data-name="ドーナツ" data-price="100">
+                    <img src="textures/items/donut.png" alt="ドーナツ">
+                    <p>ドーナツ</p>
+                    <div class="coin-display">
+                        <img src="textures/coin.png" alt="所持金アイコン" />
+                        <span>100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>

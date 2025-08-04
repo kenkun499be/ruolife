@@ -1,0 +1,153 @@
+/* ショップの画面 */
+#shop-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('textures/back2.png'); /* 背景画像を指定 */
+    background-size: cover; /* 画像が画面を覆うように調整 */
+    background-position: center; /* 画像が中央に表示されるように */
+}
+
+/* 背景 */
+.shop-background {
+    position: relative;
+    width: 90%; /* 背景の幅 */
+    max-width: 900px;
+    height: auto; /* 高さを自動調整 */
+    background-color: #ffffff; /* 背景色を白に */
+    border-radius: 10px; /* 角丸 */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* アイテムがスクロール可能に */
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* アイテムを自動的に並べる */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 400px; /* アイテムのエリアに高さを設定 */
+    overflow-y: auto; /* アイテムが多い場合にスクロールを有効に */
+}
+
+/* 各アイテムのスタイル */
+.shop-item {
+    width: 85%;
+    height: 130px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffeeee;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-item img {
+    width: 100px; /* 画像サイズを調整 */
+    height: auto;
+    border-radius: 10px; /* 角丸 */
+    object-fit: contain;
+}
+
+.shop-item p {
+    margin: 0; /* アイテム名の余白をなくす */
+    font-size: 16px;
+    color: #333;
+}
+
+.shop-item .coin-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: -5px; /* アイテム名と値段の間隔を小さくする */
+}
+
+.shop-item .coin-display img {
+    width: 15px; /* アイコンサイズ調整 */
+    height: auto;
+    margin-right: 0px; /* アイコンと金額の間隔 */
+    margin-top: -2px;
+}
+
+.shop-item:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
+}
+
+.shop-item:active {
+    transform: scale(0.9); /* クリック時に縮小 */
+}
+
+/* 所持金表示 */
+.money-display {
+    position: absolute;
+    top: 20px; /* 画面の上から少し下に配置 */
+    right: 20px; /* 画面の右から少し内側に配置 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* 他の要素より上に表示されるように */
+}
+
+.money-box {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+    color: #fff;
+    padding: 10px 15px; /* 内側の余白 */
+    height: 12px;
+    border-radius: 20px; /* 角を丸くする */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff; /* 白い枠線 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ボックスに影を追加 */
+}
+
+.money-icon {
+    width: 20px;  /* アイコンの大きさ */
+    height: auto;
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+}
+
+#money-amount {
+    font-weight: bold;
+    font-size: 18px; /* フォントサイズを少し大きく */
+}
+
+/* ホームボタン */
+.home-button {
+    position: fixed; /* 画面内で固定 */
+    top: 20px; /* 上から20px */
+    left: 20px; /* 左から20px */
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+    color: #fff;
+    padding: 10px 15px; /* 内側の余白 */
+    height: 12px;
+    border-radius: 20px; /* 角を丸くする */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff; /* 白い枠線 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ボックスに影を追加 */
+    z-index: 1000; /* 他の要素より前に表示されるように */
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.1); /* ホバー時に拡大 */
+}
+
+.home-button:active {
+    transform: scale(0.9); /* クリック時に縮小 */
+}

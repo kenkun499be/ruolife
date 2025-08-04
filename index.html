@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>りすりふぇ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 白いオーバーレイ -->
+    <div id="fade-overlay" class="fade-overlay hidden"></div>
+
+    <!-- 最初の画面 -->
+    <div id="start-screen" class="screen">
+        <img src="textures/back1.png" alt="背景1" class="background" />
+        <img src="textures/start.png" alt="スタートボタン" id="start-btn" class="start-btn" />
+    </div>
+
+    <!-- ゲーム画面 -->
+    <div id="game-screen" class="screen hidden">
+        <img src="textures/back2.png" alt="背景2" class="background" />
+        
+        <!-- XPバー -->
+        <div id="xp-bar" class="xp-bar">
+            <div id="xp-fill" class="xp-fill"></div>
+        </div>
+
+        <!-- レベル円 -->
+        <div id="level-circle" class="level-circle">
+            <span id="level-text" class="level-text">1</span>
+        </div>
+
+        <img src="textures/chara1.png" alt="キャラクター" id="character" class="character" />
+        
+        <!-- 吹き出し -->
+        <div id="speech-bubble" class="speech-bubble hidden">
+            <img src="textures/hukidasi1.png" alt="吹き出し" class="bubble-img" />
+            <p id="speech-text" class="speech-text">こんにちは！</p>
+        </div>
+
+        <!-- 半透明の横線 -->
+        <div class="horizontal-line"></div>
+
+        <!-- ボタン -->
+        <div class="button-container">
+            <button id="snack-btn">おやつ</button>
+            <button id="date-btn">デート</button>
+            <button id="shop-btn">ショップ</button>
+            <button id="event-btn">着せ替え</button>
+        </div>
+
+        <!-- メニューボタン -->
+        <button id="menu-btn" class="menu-btn">≡</button>
+
+        <!-- メニューオプション -->
+        <div id="menu-options" class="menu-options hidden">
+            <ul>
+                <li id="go-to-start">スタート画面に戻る</li>
+                <li id="notifications">お知らせ</li>
+                <li id="delete-data">データ削除</li>
+                <li id="contact-us">お問い合わせ</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- おやつUI -->
+    <div id="snack-ui" class="snack-ui hidden">
+        <div class="snack-list">
+            <!-- おやつのアイテムはJavaScriptで動的に追加 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
